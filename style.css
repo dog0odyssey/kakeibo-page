@@ -30,6 +30,7 @@ header {
 }
 
 header h1,
+header h2,
 main {
   width: min(1120px, calc(100% - 3rem));
   margin-right: auto;
