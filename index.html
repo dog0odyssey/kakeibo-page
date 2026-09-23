@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>家計簿</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>家計簿</h1>
+  </header>
+
+  <main>
+    <section aria-labelledby="entry-heading">
+      <h2 id="entry-heading">家計簿に登録する</h2>
+
+      <form action="#" method="post">
+        <p>
+          <label for="entry-date">日付</label>
+          <input type="date" id="entry-date" name="date" required>
+        </p>
+
+        <p>
+          <label for="entry-item">品目</label>
+          <input type="text" id="entry-item" name="item" placeholder="例：食料品" required>
+        </p>
+
+        <fieldset>
+          <legend>収支区分</legend>
+          <label>
+            <input type="radio" name="type" value="expense" checked>
+            支出
+          </label>
+          <label>
+            <input type="radio" name="type" value="income">
+            収入
+          </label>
+        </fieldset>
+
+        <p>
+          <label for="entry-amount">金額（円）</label>
+          <input type="number" id="entry-amount" name="amount" min="0" step="1" inputmode="numeric" required>
+        </p>
+
+        <button type="submit">追加</button>
+      </form>
+    </section>
+
+    <section aria-labelledby="summary-heading">
+      <h2 id="summary-heading">合計金額</h2>
+      <p><output name="total" aria-label="合計金額">0</output> 円</p>
+    </section>
+
+    <section aria-labelledby="list-heading">
+      <h2 id="list-heading">登録したデータ</h2>
+      <table>
+        <caption>家計簿の登録一覧</caption>
+        <thead>
+          <tr>
+            <th scope="col">日付</th>
+            <th scope="col">品目</th>
+            <th scope="col">区分</th>
+            <th scope="col">金額（円）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="4">登録されたデータはありません。</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>
